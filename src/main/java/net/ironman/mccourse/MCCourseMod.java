@@ -2,6 +2,7 @@ package net.ironman.mccourse;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.ironman.mccourse.block.ModBlocks;
 import net.ironman.mccourse.item.ModItemGroups;
 import net.ironman.mccourse.item.ModItems;
 import org.slf4j.Logger;
@@ -16,5 +17,6 @@ public class MCCourseMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

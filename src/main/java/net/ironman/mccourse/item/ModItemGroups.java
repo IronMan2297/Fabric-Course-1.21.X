@@ -2,6 +2,7 @@ package net.ironman.mccourse.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.ironman.mccourse.MCCourseMod;
+import net.ironman.mccourse.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -22,7 +23,12 @@ public class ModItemGroups {
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MCCourseMod.MOD_ID, "fluorite_blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.fluorite_blocks"))
-                    .icon(() -> new ItemStack(ModItems.RAW_FLUORITE)).entries((displayContext, entries) -> {;
+                    .icon(() -> new ItemStack(ModBlocks.FLUORITE_BLOCK)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.FLUORITE_BLOCK);
+                        entries.add(ModBlocks.FLUORITE_ORE);
+                        entries.add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.FLUORITE_NETHER_ORE);
+                        entries.add(ModBlocks.FLUORITE_END_ORE);
 
                     }).build());
 
