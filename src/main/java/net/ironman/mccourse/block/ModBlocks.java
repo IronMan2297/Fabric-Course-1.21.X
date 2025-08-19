@@ -1,6 +1,7 @@
 package net.ironman.mccourse.block;
 
 import net.ironman.mccourse.MCCourseMod;
+import net.ironman.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -29,6 +30,10 @@ public class ModBlocks {
     public static final Block FLUORITE_END_ORE = registerBlock("fluorite_end_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(6f).requiresTool()));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(3f).requiresTool()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
