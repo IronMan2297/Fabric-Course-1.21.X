@@ -2,6 +2,7 @@ package net.ironman.mccourse;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.ironman.mccourse.block.ModBlocks;
 import net.ironman.mccourse.item.ModItemGroups;
 import net.ironman.mccourse.item.ModItems;
@@ -18,5 +19,7 @@ public class MCCourseMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 	}
 }
