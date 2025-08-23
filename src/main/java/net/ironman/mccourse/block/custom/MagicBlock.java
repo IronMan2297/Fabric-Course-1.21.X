@@ -1,6 +1,7 @@
 package net.ironman.mccourse.block.custom;
 
 import net.ironman.mccourse.item.ModItems;
+import net.ironman.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -20,6 +21,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Stack;
 
 public class MagicBlock extends Block {
     public MagicBlock(Settings settings) {
@@ -45,8 +47,7 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack stack) {
-        return stack.getItem() == ModItems.FLUORITE || stack.getItem() == ModItems.RAW_FLUORITE
-                || stack.getItem() == Items.COAL;
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
