@@ -1,0 +1,4 @@
+// 1.21	2025-08-24T00:18:40.3542504	MC Course Mod/Tags for minecraft:block
+93b7b85480a984b3b9f7224014de0f064e974ecf data\minecraft\tags\block\needs_diamond_tool.json
+5461fb11049dd74e333a59f4c89304e3c93719aa data\minecraft\tags\block\needs_iron_tool.json
+940d33797de97ffa2bace749cff8fed0e715a6c7 data\minecraft\tags\block\mineable\pickaxe.json

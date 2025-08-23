@@ -1,0 +1,7 @@
+// 1.21	2025-08-24T00:18:40.359268	MC Course Mod/Block Loot Tables
+a31857ab8b8ff379b6726cca5a45cc7b943f7c6e data\mccourse\loot_table\blocks\fluorite_block.json
+b8ef555e205361b728fc81fe21b49d7f3ca6328d data\mccourse\loot_table\blocks\fluorite_nether_ore.json
+840b0bbaf3cd0ca8e7e0de78c02714350f3c09c3 data\mccourse\loot_table\blocks\fluorite_end_ore.json
+f3ee765bb7e1d2901da1ff910bf72aa2dea099fd data\mccourse\loot_table\blocks\fluorite_deepslate_ore.json
+40ceb4a052e93ed6215b679af39803140c4e941b data\mccourse\loot_table\blocks\magic_block.json
+b6049382f344ae9b7e3458dad4836691ce9eca45 data\mccourse\loot_table\blocks\fluorite_ore.json
