@@ -1,15 +1,20 @@
 package net.ironman.mccourse.item.custom;
 
 import net.fabricmc.fabric.mixin.screenhandler.ServerPlayerEntityMixin;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.Objects;
 
 public class ChainsawItem extends Item {
@@ -31,5 +36,17 @@ public class ChainsawItem extends Item {
         }
 
         return ActionResult.CONSUME;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.mccourse.press_shift"));
+        } else {
+            tooltip.add(Text.translatable("tooltip.mccourse.chainsaw.1"));
+            tooltip.add(Text.translatable("tooltip.mccourse.chainsaw.2"));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }
